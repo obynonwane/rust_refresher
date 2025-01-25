@@ -162,13 +162,26 @@ enum StatusCode {
 }
 
 // enums with value
-enum Cach   eStrategy {
+enum CacheStrategy {
     LRU(String),
     MRU(i32),
 }
 fn enums() {
     let lru = catchType::LRU;
     let mru = catchType::MRU;
+}
+
+fn while_loop() {
+    println!("------------------------running while loops-------------------------------------\n");
+
+    let mut num = 1;
+
+    while num < 5 {
+        num += 1;
+        print!("current num is {num}\n")
+    }
+
+    print!("while executed and exited current number is:  {num}\n")
 }
 
 fn main() {
@@ -178,5 +191,6 @@ fn main() {
     execute_traits();
     slice();
     hashmap();
-    vectors()
+    vectors();
+    while_loop();
 }
