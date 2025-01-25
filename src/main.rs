@@ -184,6 +184,21 @@ fn while_loop() {
     print!("while executed and exited current number is:  {num}\n")
 }
 
+enum Web3 {
+    Defi,
+    NFT,
+    Game,
+    Metaverse,
+}
+fn number_assign(web3: Web3) -> u8 {
+    match web3 {
+        Web3::Defi => 1,
+        Web3::NFT => 2,
+        Web3::Game => 3,
+        Web3::Metaverse => 4,
+    }
+}
+
 fn main() {
     tuple();
     array();
@@ -193,4 +208,7 @@ fn main() {
     hashmap();
     vectors();
     while_loop();
+
+    let defi = number_assign(Web3::Defi);
+    assert_eq!(1, defi);
 }
