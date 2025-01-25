@@ -144,6 +144,33 @@ fn vectors() {
     }
 }
 
+enum catchType {
+    LRU,
+    MRU,
+}
+
+struct Cache {
+    level: String,
+    cacheType: catchType,
+}
+
+// c-type enum
+enum StatusCode {
+    Ok = 200,
+    Badrequest = 400,
+    NotFound = 404,
+}
+
+// enums with value
+enum Cach   eStrategy {
+    LRU(String),
+    MRU(i32),
+}
+fn enums() {
+    let lru = catchType::LRU;
+    let mru = catchType::MRU;
+}
+
 fn main() {
     tuple();
     array();
