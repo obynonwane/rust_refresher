@@ -108,6 +108,42 @@ fn hashmap() {
         print!("{key}: {value}\n")
     }
 }
+
+struct Employee {
+    name: String,
+    assigned_id: u64,
+    email: String,
+    active: bool,
+}
+
+fn vectors() {
+    println!("------------------------running vectors-------------------------------------\n");
+
+    // create a new instance of Employee struct
+    let emp1 = Employee {
+        name: String::from("John Doe"),
+        assigned_id: 1,
+        email: String::from("biostechnologyng@gmail.com"),
+        active: true,
+    };
+
+    // declare and initialize a vector
+    let mut employees = Vec::new();
+    // push item to vector
+    employees.push(emp1);
+
+    //changing an element
+    if let Some(emp) = employees.get_mut(0) {
+        emp.email = String::from("obinn@gmail.com");
+    }
+
+    // reading an element
+    if let Some(emp) = employees.get(0) {
+        print!("Employee Name: {}\n", emp.name);
+        print!("Employee Email: {}\n", emp.email);
+    }
+}
+
 fn main() {
     tuple();
     array();
@@ -115,4 +151,5 @@ fn main() {
     execute_traits();
     slice();
     hashmap();
+    vectors()
 }
